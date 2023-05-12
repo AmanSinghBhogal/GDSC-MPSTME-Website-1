@@ -3,35 +3,41 @@ import styled from 'styled-components';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import ProfileCard from './ProfileCard';
 
-const SubCore = ({Team}) => {
+const SubCore = ({ Team }) => {
 
     const scrollRef = React.useRef(null)
 
     const scroll = (direction) => {
-      const { current } = scrollRef;
-      if( direction === 'left') {
-        current.scrollLeft -= 300;
-      }
-      else{
-        current.scrollLeft += 300;
-      }
+        const { current } = scrollRef;
+        if (direction === 'left') {
+            current.scrollBy({
+                left: -300,
+                behavior: 'smooth',
+            });
+        }
+        else {
+            current.scrollBy({
+                left: 300,
+                behavior: 'smooth',
+            });
+        }
     }
 
     return (
         <SuCore>
             <Members className='images_container' ref={scrollRef}>
-                { 
+                {
                     Team.map((Person, index) => (
                         index !== 0
                         &&
                         <div className="images_card" >
-                            <ProfileCard Person = {Person} key = {index} />
+                            <ProfileCard Person={Person} key={index} />
                         </div>
                     ))
                 }
             </Members>
             <div className="arrow">
-                <button><BsArrowLeftShort className='arrow-icon' onClick={() => scroll('left') } /></button> 
+                <button><BsArrowLeftShort className='arrow-icon' onClick={() => scroll('left')} /></button>
                 <button><BsArrowRightShort className='arrow-icon' onClick={() => scroll('right')} /></button>
             </div>
         </SuCore>
@@ -59,15 +65,20 @@ const SuCore = styled.div`
         align-items: center;
         padding: 0 1rem;
         position: absolute;
+        @media (max-width: 756px)
+        {
+            display: none;
+        }
     }
 
     button{
         border:none;
+        background-color: var(--bg);
     }
     
     .arrow-icon{
-        background-color: white;
-        color: #5f6368;
+        background-color: var(--bg);
+        color: var(--nav-links);
         border: 1px solid lightgrey;
         border-radius: 5px;
         box-shadow: 0 0 12px 0 #9b9595;

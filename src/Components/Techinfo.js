@@ -8,18 +8,18 @@ const technologies = [
         "link": "https://codelabs.developers.google.com/?cat=web",
         "SiteName": 'Codelabs',
         "bufferBtnName": '',
-        "bufferBtnLink" : ''
+        "bufferBtnLink": ''
     },
     {
         "name": "Flutter",
-        "img": "/images/Flutter2.png",
+        "img": "/images/flutter.png",
         "content": "Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. Learn how to build a Flutter app that adapts to the platform that it is running on, be that Android, iOS, the web, Windows, macOS, or Linux.",
         "bkgclr": '',
         "isLeft": '',
         "SiteName": 'Codelabs',
         "link": "https://codelabs.developers.google.com/?cat=flutter#0",
-        "bufferBtnName" : '',
-        "bufferBtnLink" : ''
+        "bufferBtnName": '',
+        "bufferBtnLink": ''
     },
     {
         "name": "Android Development",
@@ -30,7 +30,7 @@ const technologies = [
         "link": "https://codelabs.developers.google.com/?cat=android",
         "SiteName": 'Codelabs',
         "bufferBtnName": '',
-        "bufferBtnLink" : ''
+        "bufferBtnLink": ''
     },
     {
         "name": "Google Cloud",
@@ -40,8 +40,8 @@ const technologies = [
         "isLeft": '',
         "SiteName": 'Codelabs',
         "link": "https://codelabs.developers.google.com/?cat=cloud",
-        "bufferBtnName" : '',
-        "bufferBtnLink" : ''
+        "bufferBtnName": '',
+        "bufferBtnLink": ''
     }
 ];
 

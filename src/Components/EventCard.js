@@ -38,7 +38,7 @@ function EventCard({event})
 export default EventCard;
 
 const Container = styled.div`
-    background-color: ${props => props.background? `white`:`#F8F9FA`};
+    background-color: ${props => props.background? `var(--bg)`:`var(--bg)`};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,10 +88,11 @@ const EventInfo = styled.div`
     h2
     {
         margin: 5px 0px;
+        color: var(--about-para);
     }
     p
     {
-        color: #5f6368;
+        color: var(--about-para);
         font-weight: 500;
         margin-bottom: 5px;
     }

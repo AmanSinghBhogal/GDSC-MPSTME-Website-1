@@ -8,8 +8,8 @@ function Footer()
     return(
         <Container>
             <FooterImg>
-                <img src="./images/FooterLogo.JPG" alt="404! Element Not Found" />
-                <p id="copy">&copy;{(new Date().getFullYear())}| All Rights Reserved</p>
+                <img src="./images/Footer Logo.png" alt="404! Element Not Found" />
+                <p>&copy;{(new Date().getFullYear())}| All Rights Reserved</p>
                 <p>Engineered By Technical Team.</p>
                 <p>Powered By Google</p>
             </FooterImg>
@@ -41,7 +41,8 @@ export default Footer;
 
 const Container = styled.div`
     display: flex;
-    padding: 0 50px 10px 50px;
+    /* padding removed due to dark mode
+    padding: 0 50px 10px 50px; */
     justify-content: center;
     border-top: 1px solid lightgrey;
     @media (max-width: 756px)
@@ -58,15 +59,17 @@ const FooterImg = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #5f6368;
+    color: var(--nav-links);
     font-size: 0.8em;
-    font-weight: 600; 
+    font-weight: 600;
+    background-color : var(--bg);
     img{
         margin-bottom: -20px;
         width: 100%;
         max-width: 250px;
         fit-content: contain;
     }
+    
     @media (max-width: 756px)
      {
         width: 100%;
@@ -78,7 +81,7 @@ const QuickLinks = styled(FooterImg)`
     align-items: flex-start;
     a{
         text-decoration: none;
-        color: #5f6368;   
+        color: var(--nav-links);   
     }
     a:hover{
         color: #4285F4;
@@ -134,7 +137,7 @@ const Icons = styled.div`
         color: blue;
     }
     #github{
-        color: black;
+        color: var(--about-para);
     }
     #linkedin{
         color: darkblue;
